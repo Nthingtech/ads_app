@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Report Data</title>
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/icon.jpg" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#page-top">ASD Insights</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
+                <li class="sidebar-nav-item"><a href="#features">Features</a></li>
+                <li class="sidebar-nav-item"><a href="#login">Login</a></li>
+                <li class="sidebar-nav-item"><a href="#contact">New account</a></li>
+            </ul>
+        </nav>
+
+		<!-- Header-->
+        <header class="logobar">
+		    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+		      <div class="d-flex align-items-center">
+		        <span class="service-icon rounded-circle mx-auto mb-3 text-left">
+		          <img width="71,5" height="71,5" src="assets/icon.jpg"></span>
+		        <span class="ml-2 custom-text">Report Data</span>
+		      </div>
+		    </div>
+		</header>
+
+
+
+        <!-- Record Data -->
+        <br>
+
+        <div class="text-section">
+
+		<h4 class="text-center custom-font">In this section, you will have the opportunity to record the daily behavior/feelings of children with Autism Spectrum Disorder (ASD). It is essential that you report the observed behaviors throughout the day, as this will help us better understand the needs and development of these children.</h4>
+		</div>
+
+        <div class="container">
+		    <div class="card mb-5">
+
+		    <br>
+
+		    <div style="display: flex; align-items: center;">
+					<img src="assets/img/puzzle.jpg" alt="puzzle" style="width: 50px; height: auto; float: left; margin-right: 10px;">
+					<h2 style="color: #DAA520;">Teachers/Assistants's Record</h2>
+			</div>
+
+			<br>
+
+
+		            <div class="form-group">
+					    <div class="row">
+					        <div class="col-md-6">
+					            <h2>How was the day?</h2>
+
+					            <label class="required">Date:</label>
+					            <input class="form-control input-date" type="date" name="date" id="date" value="">
+
+					            <br>
+
+					            <label>Name:</label>
+					            <input class="form-control custom-name" placeholder="Name of child" required id="name" name="name" value="">
+
+					            <br>
+
+					            <h2>Day Rating</h2>
+								<div class="form-group">
+								    <label style="font-size: 1.2em;">How would you rate the difficulty level of the day for the child?</label><br>
+								    <small style="font-size: 0.96em;">On a scale from 0 to 5, where 0 indicates an easy day and 5 signifies a challenging day.</small><br>
+								    <input type="range" class="range-slider custom-range" min="0" max="5" step="1"
+								           oninput="document.getElementById('rangeval').textContent = this.value" required id="dayClassification" name="dayClassification" value="0">
+								    <span id="rangeval">0</span>
+								</div>
+					        </div>
+
+					        <div class="col-md-6" style="text-align: right;">
+					            <img src="assets/img/photokid.jpg" class="img-fluid" style="max-width: 60%; height: auto;">
+					        </div>
+					    </div>
+					</div>
+
+
+
+		            <h4>Behavior</h4>
+		            <label style="font-size: 1.2em;">How would you rate the intensity of the child's behaviors throughout the day?</label></br>
+		            <small style="font-size: 0.96em;"> Using a scale from 0 to 5, where 0 represents mild behaviors and 5 signifies intense behaviors.</small></br>
+		            <div class="container mt-3">
+		                <div class="row">
+
+							<!-- Behavior 1: Social Interaction -->
+		                    <div class="form-group col-3 col-12 col-sm-12 col-md-4 col-lg-3">
+							    <div class="d-flex justify-content-between">
+							        <label>Social Interaction</label>
+							    </div>
+							    <tr>
+							        <td>0</td>
+							    </tr>
+							    <tr>
+							        <input type="range" class="range-slider" min="0" max="5" step="1" id="behaviourSocialInteraction" name="behaviour[SocialInteraction]" value="0">
+							    </tr>
+							    <span id="slider-value"></span>
+							</div>
+
+
+							<!-- Behavior 2: Anxiety -->
+							<div class="form-group col-3 col-12 col-sm-12 col-md-4 col-lg-3">
+							    <div class="d-flex justify-content-between">
+							        <label>Anxiety</label>
+							    </div>
+							    <tr>
+							        <td>0</td>
+							    </tr>
+							    <tr>
+							        <input type="range" class="range-slider" min="0" max="5" step="1" id="behaviourAnxiety" name="behaviour[Anxiety]" value="0">
+							    </tr>
+							    <span id="slider-value-anxiety"></span>
+							</div>
+
+							<!-- Behavior 3: Pleasant -->
+							<div class="form-group col-3 col-12 col-sm-12 col-md-4 col-lg-3">
+							    <div class="d-flex justify-content-between">
+							        <label>Pleasant</label>
+							    </div>
+							    <tr>
+							        <td>0</td>
+							    </tr>
+							    <tr>
+							        <input type="range" class="range-slider" min="0" max="5" step="1" id="behaviourPleasant" name="behaviour[Pleasant]" value="0">
+							    </tr>
+							    <span id="slider-value-pleasant"></span>
+							 </div>
+
+							 <!-- Behavior 4: Impatience -->
+							 <div class="form-group col-3 col-12 col-sm-12 col-md-4 col-lg-3">
+							     <div class="d-flex justify-content-between">
+							         <label>Impatience</label>
+							     </div>
+							     <tr>
+							         <td>0</td>
+							     </tr>
+							     <tr>
+							         <input type="range" class="range-slider" min="0" max="5" step="1" id="behaviourImpatience" name="behaviour[Impatience]" value="0">
+							     </tr>
+							     <span id="slider-value-impatience"></span>
+							 </div>
+
+							 <!-- Behavior 5: Aggressiveness -->
+							 <div class="form-group col-3 col-12 col-sm-12 col-md-4 col-lg-3">
+							     <div class="d-flex justify-content-between">
+							         <label>Aggressiveness</label>
+							     </div>
+							     <tr>
+							         <td>0</td>
+							     </tr>
+							     <tr>
+							         <input type="range" class="range-slider" min="0" max="5" step="1" id="behaviourAggressiveness" name="behaviour[Aggressiveness]" value="0">
+							     </tr>
+							     <span id="slider-value-aggressiveness"></span>
+							</div>
+
+							<!-- Behavior 6: Friendliness -->
+							<div class="form-group col-3 col-12 col-sm-12 col-md-4 col-lg-3">
+							    <div class="d-flex justify-content-between">
+							        <label>Friendliness</label>
+							    </div>
+							    <tr>
+							        <td>0</td>
+							    </tr>
+							    <tr>
+							        <input type="range" class="range-slider" min="0" max="5" step="1" id="behaviourFriendliness" name="behaviour[Friendliness]" value="0">
+							    </tr>
+							    <span id="slider-value-friendliness"></span>
+						</div>
+
+						<!-- Behavior 7: Communication -->
+						<div class="form-group col-3 col-12 col-sm-12 col-md-4 col-lg-3">
+						    <div class="d-flex justify-content-between">
+						        <label>Communication</label>
+						    </div>
+						    <tr>
+						        <td>0</td>
+						    </tr>
+						    <tr>
+						        <input type="range" class="range-slider" min="0" max="5" step="1" id="behaviourCommunication" name="behaviour[Communication]" value="0">
+						    </tr>
+						    <span id="slider-value-communication"></span>
+						</div>
+
+						<!-- Behavior 8: Concentration -->
+						<div class="form-group col-3 col-12 col-sm-12 col-md-4 col-lg-3">
+						    <div class="d-flex justify-content-between">
+						        <label>Concentration</label>
+						    </div>
+						    <tr>
+						        <td>0</td>
+						    </tr>
+						    <tr>
+						        <input type="range" class="range-slider" min="0" max="5" step="1" id="behaviourConcentration" name="behaviour[Concentration]" value="0">
+						    </tr>
+						    <span id="slider-value-concentration"></span>
+						</div>
+		                </div>
+            		</div>
+
+            		<br>
+
+            	<!-- Known here -->
+				  <div style="display: flex; align-items: center;">
+				      <div style="position: relative; max-width: 20%; height: auto; float: left; margin-left: 95px ">
+				          <a href="index4.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></a>
+				          <img src="assets/img/photokid2.jpg" class="img-fluid" style="max-width: 100%; height: auto;">
+				      </div>
+				      <div style="max-width: 60%; float: right;">
+				          <h3>Are there any doubts regarding these behaviors?</h3>
+				          <p>Click on the image to the side to get a brief explanation of each one.</p>
+				      </div>
+				  </div>
+
+				  <br>
+
+					<div style="display: flex; align-items: center;">
+					  <img src="assets/img/puzzle.jpg" alt="puzzle" style="width: 50px; height: auto; float: left; margin-right: 10px;">
+					  <h2 style="color: #DAA520;">Child's Record</h2>
+					</div>
+
+				  <br>
+
+					<h2>How does the child feel today?</h2>
+					<p>Ask the child which of the emotions below they most identify with today.</p>
+
+				<br>
+
+				  <!--Kid emotions-->
+				 <div class="image-container">
+				  	<img src="assets/img/photothinking.jpg" alt="Girl thinking">
+			'	</div>
+
+
+				<div class="row justify-content-start">
+  					<div class="form-group col-3 col-sm-3 col-md-3  emotion-checkbox">
+    				<div class="d-flex flex-column align-items-center">
+				    <img src="assets/img/emotion happy.jpg" style="max-width: 100px;" alt="Happy emotion">
+				    <label>
+				      <input type="checkbox" name="emotions" value="Happy emotion">
+				      Happy
+				    </label>
+				  </div>
+				</div>
+
+				<div class="form-group col-3 col-12 col-sm-12 col-md-3">
+				 <div class="d-flex flex-column align-items-center">
+					<img src="assets/img/emotion good.jpg" style="max-width: 100px;" alt="Good emotion">
+					<label>
+					 <input type="checkbox" name="emotions" value="Happy emotion">
+						 Good
+					</label>
+					</div>
+				</div>
+
+				<div class="form-group col-3 col-12 col-sm-12 col-md-3">
+					<div class="d-flex flex-column align-items-center">
+					<img src="assets/img/emotion calm.jpg" style="max-width: 100px;" alt="Calm emotion">
+					<label>
+						<input type="checkbox" name="emotions" value="Happy emotion">
+							 Calm
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row justify-content-start">
+			  	<div class="form-group col-3 col-sm-3 col-md-3 emotion-checkbox">
+			    	<div class="d-flex flex-column align-items-center">
+						<img src="assets/img/emotion upset.jpg" style="max-width: 100px;" alt="Upset emotion">
+						<label>
+					 <input type="checkbox" name="emotions" value="Upset emotion">
+						Upset
+						</label>
+						</div>
+					</div>
+
+				<div class="form-group col-3 col-12 col-sm-12 col-md-3">
+					<div class="d-flex flex-column align-items-center">
+						<img src="assets/img/emotion annoyed.jpg" style="max-width: 100px;" alt="Annoyed emotion">
+								<label>
+								 <input type="checkbox" name="emotions" value="Annoyed emotion">
+									 Annoyed
+								</label>
+								</div>
+							</div>
+
+				<div class="form-group col-3 col-12 col-sm-12 col-md-3">
+						<div class="d-flex flex-column align-items-center">
+							<img src="assets/img/emotion angry.jpg" style="max-width: 100px;" alt="Angry emotion">
+								<label>
+							<input type="checkbox" name="emotions" value="Angry emotion">
+										 Angry
+						</label>
+					</div>
+				</div>
+				</div>
+
+				<br>
+				<br>
+
+			<div class="d-flex justify-content-center">
+		  		<button type="submit" class="btn btn-primary btn-lg">Register</button>
+			</div>
+
+			<br>
+			<br>
+
+
+
+
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container px-4 px-lg-5">
+            <p class="text-muted medium mb-0">&copy; 2023 Ariane Macedo - x21185492 <img width="60" height="60" src="assets/icon.jpg"></p>
+
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+		    // Social Interaction
+			    const rangeInputSocialInteraction = document.getElementById('behaviourSocialInteraction');
+			    const sliderValueSocialInteraction = document.getElementById('slider-value');
+
+			    rangeInputSocialInteraction.addEventListener('input', function() {
+			        sliderValueSocialInteraction.textContent = rangeInputSocialInteraction.value;
+			    });
+
+			    // Behavior 2: Anxiety
+			    const rangeInputAnxiety = document.getElementById('behaviourAnxiety');
+			    const sliderValueAnxiety = document.getElementById('slider-value-anxiety');
+
+			    rangeInputAnxiety.addEventListener('input', function() {
+			        sliderValueAnxiety.textContent = rangeInputAnxiety.value;
+			    });
+
+			    // Behavior 3: Pleasant
+			    const rangeInputPleasant = document.getElementById('behaviourPleasant');
+			    const sliderValuePleasant = document.getElementById('slider-value-pleasant');
+
+			    rangeInputPleasant.addEventListener('input', function() {
+			        sliderValuePleasant.textContent = rangeInputPleasant.value;
+			    });
+
+			    // Behavior 4: Impatience
+				 const rangeInputImpatience = document.getElementById('behaviourImpatience');
+				 const sliderValueImpatience = document.getElementById('slider-value-impatience');
+
+				 rangeInputImpatience.addEventListener('input', function() {
+				 sliderValueImpatience.textContent = rangeInputImpatience.value;
+    			});
+
+    			// Behavior 5: Aggressiveness
+    			const rangeInputAggressiveness = document.getElementById('behaviourAggressiveness');
+				    const sliderValueAggressiveness = document.getElementById('slider-value-aggressiveness');
+
+				rangeInputAggressiveness.addEventListener('input', function() {
+				sliderValueAggressiveness.textContent = rangeInputAggressiveness.value;
+				});
+
+				// Behavior 6: Friendliness
+				const rangeInputFriendliness = document.getElementById('behaviourFriendliness');
+				const sliderValueFriendliness = document.getElementById('slider-value-friendliness');
+
+				rangeInputFriendliness.addEventListener('input', function() {
+				sliderValueFriendliness.textContent = rangeInputFriendliness.value;
+    			});
+
+    			// Behavior 7: Communication
+				const rangeInputCommunication = document.getElementById('behaviourCommunication');
+				const sliderValueCommunication = document.getElementById('slider-value-communication');
+
+				rangeInputCommunication.addEventListener('input', function() {
+				sliderValueCommunication.textContent = rangeInputCommunication.value;
+				});
+
+				 // Behavior 8: Concentration
+				 const rangeInputConcentration = document.getElementById('behaviourConcentration');
+				 const sliderValueConcentration = document.getElementById('slider-value-concentration');
+
+				 rangeInputConcentration.addEventListener('input', function() {
+				 sliderValueConcentration.textContent = rangeInputConcentration.value;
+    			});
+		</script>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </body>
+</html>
